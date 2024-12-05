@@ -1,0 +1,81 @@
+
+body {
+  font-family: 'Times New Roman', serif; 
+  margin: 0;
+}
+
+
+.main__posters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.poster-card {
+  border: 1px solid #a0522d; /* Коричневый цвет, ассоциируется с театром */
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.poster-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.poster-card:hover img {
+  transform: scale(1.05);
+}
+
+.poster-card__title {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center; /* Заголовок по центру */
+}
+
+/* Стили для корзины */
+.cart {
+  background-color: #fff;
+  border: 1px solid #a0522d; /* Коричневый цвет */
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-top: 20px; /* Расстояние от постеров */
+}
+
+.cart__header {
+  background-color: #a0522d; /* Коричневый цвет */
+  color: white;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  font-weight: bold;
+}
+
+.cart__body {
+  padding: 10px;
+}
+
+.cart__item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.cart__footer {
+  border-top: 1px solid #eee;
+  padding: 10px;
+  text-align: right;
+}
+
+.cart__clear-button {
+  margin-left: 10px;
+}
+
+/* Адаптация под разные размеры экрана */
+@media (max-width: 768px) {
+  .main__posters {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
